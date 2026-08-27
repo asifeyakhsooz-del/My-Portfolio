@@ -1,6 +1,6 @@
 'use client';
 
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Linkedin, ExternalLink } from 'lucide-react';
 
 const footerLinks = [
   {
@@ -27,8 +27,8 @@ const footerLinks = [
     title: 'Quick Links',
     links: [
       { label: 'About Me', href: '#about' },
+      { label: 'Portfolio', href: '#results' },
       { label: 'My Process', href: '#process' },
-      { label: 'Results', href: '#results' },
       { label: 'Contact', href: '#contact' },
     ],
   },
@@ -61,7 +61,7 @@ export default function Footer() {
               QuickBooks Online ProAdvisor specializing in bookkeeping for
               property managers, landlords, and real estate investors.
             </p>
-            <div className="flex gap-3 mt-5">
+            <div className="flex flex-wrap gap-3 mt-5">
               <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-navy-300">
                 QuickBooks ProAdvisor
               </span>
@@ -71,6 +71,27 @@ export default function Footer() {
               <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-navy-300">
                 AppFolio Certified
               </span>
+            </div>
+            {/* Social Links */}
+            <div className="flex items-center gap-3 mt-6">
+              <a
+                href="https://www.linkedin.com/in/asif-alibookkeeper/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 rounded-lg text-xs text-navy-300 hover:text-brand-green hover:border-brand-green/30 transition-all"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+                LinkedIn
+              </a>
+              <a
+                href="https://www.upwork.com/freelancers/~0151ad6431951e1ed9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 rounded-lg text-xs text-navy-300 hover:text-brand-green hover:border-brand-green/30 transition-all"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                Upwork
+              </a>
             </div>
           </div>
 
@@ -101,10 +122,13 @@ export default function Footer() {
           <p className="text-xs text-navy-500">
             &copy; {new Date().getFullYear()} Asif Ali. All rights reserved.
           </p>
-          <p className="text-xs text-navy-500">
-            Real Estate Bookkeeping &middot; QuickBooks Online &middot; Property
-            Management Accounting
-          </p>
+          <div className="flex items-center gap-4 text-xs text-navy-500">
+            <span>Real Estate Bookkeeping</span>
+            <span className="text-navy-700">&middot;</span>
+            <span>QuickBooks Online</span>
+            <span className="text-navy-700">&middot;</span>
+            <span>Property Management Accounting</span>
+          </div>
         </div>
       </div>
     </footer>

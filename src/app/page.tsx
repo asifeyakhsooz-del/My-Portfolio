@@ -5,7 +5,7 @@ import Services from '@/components/sections/Services';
 import Specialization from '@/components/sections/Specialization';
 import SoftwareCertifications from '@/components/sections/SoftwareCertifications';
 import Process from '@/components/sections/Process';
-import Results from '@/components/sections/Results';
+import UpworkPortfolio from '@/components/sections/UpworkPortfolio';
 import Testimonial from '@/components/sections/Testimonial';
 import WhyWorkWithMe from '@/components/sections/WhyWorkWithMe';
 import Contact from '@/components/sections/Contact';
@@ -16,11 +16,13 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">
-        <Hero />\n        <About />
+        <Hero />
+        <About />
         <Services />
         <Specialization />
         <SoftwareCertifications />
-        <Process />\n        <Results />
+        <Process />
+        <UpworkPortfolio />
         <Testimonial />
         <WhyWorkWithMe />
         <Contact />

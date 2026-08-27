@@ -1,6 +1,7 @@
 'use client';
 
-import { Award, Globe, Users, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
+import { Award, Globe, Users, TrendingUp, Linkedin, ExternalLink } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const highlights = [
@@ -36,22 +37,60 @@ export default function About() {
   return (
     <section id="about" className="py-20 sm:py-28 bg-white">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Column */}
-          <div
-            className={`transition-all duration-700 ${
-              isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <span className="inline-block text-brand-green font-semibold text-sm tracking-wide uppercase mb-3">
+        {/* Profile Header */}
+        <div
+          className={`flex flex-col sm:flex-row items-center sm:items-end gap-6 mb-14 transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shadow-lg ring-4 ring-brand-green/10 flex-shrink-0">
+            <Image
+              src="/profile-photo.jpeg"
+              alt="Asif Ali - Real Estate Bookkeeper"
+              fill
+              className="object-cover object-top"
+              sizes="128px"
+            />
+          </div>
+          <div className="text-center sm:text-left">
+            <span className="inline-block text-brand-green font-semibold text-sm tracking-wide uppercase mb-1">
               About Me
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
               A Bookkeeper Who Actually Understands Real Estate
             </h2>
-            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+            <div className="flex items-center gap-3 mt-3 justify-center sm:justify-start">
+              <a
+                href="https://www.linkedin.com/in/asif-alibookkeeper/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-navy-600 hover:text-brand-green transition-colors font-medium"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
+              <span className="text-navy-200">|</span>
+              <a
+                href="https://www.upwork.com/freelancers/~0151ad6431951e1ed9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-navy-600 hover:text-brand-green transition-colors font-medium"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Upwork Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left Column - Bio */}
+          <div
+            className={`transition-all duration-700 delay-100 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 I&rsquo;m Asif Ali, a QuickBooks Online ProAdvisor with over four years
                 of hands-on experience in bookkeeping and accounting for the real
@@ -85,7 +124,7 @@ export default function About() {
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
                 }`}
-                style={{ transitionDelay: `${(index + 1) * 120}ms` }}
+                style={{ transitionDelay: `${(index + 2) * 120}ms` }}
               >
                 <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4">
                   <item.icon className="w-5 h-5 text-brand-green" />
