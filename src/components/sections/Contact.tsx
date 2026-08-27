@@ -127,7 +127,7 @@ export default function Contact() {
           >
             <form
               onSubmit={handleSubmit}
-              className="p-6 sm:p-8 bg-navy-50/70 rounded-2xl border border-navy-100"
+              className="p-6 sm:p-8 bg-navy-50 rounded-2xl border border-navy-100"
             >
               <div className="space-y-4">
                 <div>

@@ -105,7 +105,7 @@ function ProjectCard({ project, index, isVisible }: { project: UpworkProject; in
       style={{ transitionDelay: `${(index + 1) * 100}ms` }}
     >
       {/* Card Header */}
-      <div className={`p-5 sm:p-6 ${isFeatured ? 'bg-navy-900' : 'bg-navy-50/70 border-b border-navy-100'}`}>
+      <div className={`p-5 sm:p-6 ${isFeatured ? 'bg-navy-900' : 'bg-navy-50 border-b border-navy-100'}`}>
         <div className="flex flex-wrap items-center gap-2 mb-2">
           {isFeatured && (
             <span className="px-2.5 py-0.5 bg-brand-green/20 text-brand-green text-[10px] sm:text-xs font-semibold rounded-full uppercase tracking-wide">
@@ -201,7 +201,7 @@ export default function UpworkPortfolio() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="results" className="py-20 sm:py-28 bg-navy-50/50">
+    <section id="results" className="py-20 sm:py-28 bg-navy-50">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div

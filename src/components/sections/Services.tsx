@@ -95,7 +95,7 @@ export default function Services() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="services" className="py-20 sm:py-28 bg-navy-50/50">
+    <section id="services" className="py-20 sm:py-28 bg-navy-50">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div

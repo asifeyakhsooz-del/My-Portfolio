@@ -119,7 +119,7 @@ export default function About() {
             {highlights.map((item, index) => (
               <div
                 key={item.title}
-                className={`p-5 sm:p-6 rounded-2xl bg-navy-50/70 border border-navy-100 card-hover transition-all duration-700 ${
+                className={`p-5 sm:p-6 rounded-2xl bg-navy-50 border border-navy-100 card-hover transition-all duration-700 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
