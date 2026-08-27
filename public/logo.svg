@@ -1,29 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<defs>
-  <style type="text/css">
-    .st194{fill:#2D2D2D;stroke:#FFFFFF;stroke-width:0.6317;stroke-miterlimit:10;}
-    .st23{fill:#FFFFFF;}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
 
-    .z-breathe {
-      animation: breathe 2.5s ease-in-out infinite;
-    }
+    <!-- Monogram Metallic Gold Gradient -->
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
 
-    @keyframes breathe {
-      0%, 100% { opacity: 0.7; }
-      50% { opacity: 1; }
-    }
-  </style>
-</defs>
+    <!-- Emerald Accent Gradient -->
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
 
-<g>
-  <path class="st194" d="M24.51,28.51H5.49c-2.21,0-4-1.79-4-4V5.49c0-2.21,1.79-4,4-4h19.03c2.21,0,4,1.79,4,4v19.03
-    C28.51,26.72,26.72,28.51,24.51,28.51z"/>
-  <g class="z-breathe">
-    <path class="st23" d="M15.47,7.1l-1.3,1.85c-0.2,0.29-0.54,0.47-0.9,0.47h-7.1V7.09C6.16,7.1,15.47,7.1,15.47,7.1z"/>
-    <polygon class="st23" points="24.3,7.1 13.14,22.91 5.7,22.91 16.86,7.1"/>
-    <path class="st23" d="M14.53,22.91l1.31-1.86c0.2-0.29,0.54-0.47,0.9-0.47h7.09v2.33H14.53z"/>
+    <!-- Subtle Drop Shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="500" fill="url(#bg-grad)" />
+
+  <!-- Central Graphic Group -->
+  <g transform="translate(0, -10)">
+    
+    <!-- Monogram Logo Mark (Interlocking AA) -->
+    <g filter="url(#shadow)">
+      <!-- First 'A' - Primary Stroke (Gold) -->
+      <path d="M 365 110 L 305 250 L 333 250 L 347 217 L 383 217 L 390 200 L 340 200 L 365 142 Z" fill="url(#gold-grad)" />
+      
+      <!-- Second 'A' - Overlapping Stroke (Emerald Accent) -->
+      <path d="M 435 110 L 410 168 L 424 200 L 453 200 L 447 217 L 417 217 L 403 250 L 495 250 Z" fill="url(#emerald-grad)" opacity="0.9" />
+
+      <!-- Interlocking Central Peak & Crossbar Geometry -->
+      <path d="M 400 130 L 372 195 L 428 195 Z" fill="url(#gold-grad)" />
+      
+      <!-- Precision Cut Accent Line -->
+      <line x1="330" y1="225" x2="470" y2="225" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+    </g>
+
+    <!-- Divider Diamond Accent -->
+    <polygon points="400,270 405,275 400,280 395,275" fill="#FBBF24" />
+
+    <!-- Typography: Primary Name -->
+    <text x="400" y="335" 
+          font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" 
+          font-size="42" 
+          font-weight="800" 
+          fill="#FFFFFF" 
+          text-anchor="middle" 
+          letter-spacing="9">
+      ASIF ALI
+    </text>
+
+    <!-- Typography: Subtitle / Tagline -->
+    <text x="400" y="375" 
+          font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" 
+          font-size="14" 
+          font-weight="500" 
+          fill="#94A3B8" 
+          text-anchor="middle" 
+          letter-spacing="6">
+      FINANCIAL &amp; ACCOUNTING SERVICES
+    </text>
+
+    <!-- Decorative Bottom Accent Lines -->
+    <line x1="260" y1="371" x2="310" y2="371" stroke="#334155" stroke-width="1" />
+    <line x1="490" y1="371" x2="540" y2="371" stroke="#334155" stroke-width="1" />
+    
   </g>
-</g>
 </svg>
